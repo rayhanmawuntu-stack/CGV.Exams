@@ -1,0 +1,180 @@
+/* Admin scoreboard mobile spacing refinement.
+ * Keeps the universal mobile table-card system intact while making the dense
+ * scoreboard easier to scan on phones. Desktop rendering is unchanged. */
+
+@media (max-width: 760px) {
+  .table-card:has(.scoreboard-filter-button) .table-card-header {
+    display: grid !important;
+    gap: 10px !important;
+    padding: 16px 16px 10px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .table-card-header > div:first-child {
+    min-inline-size: 0 !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .table-card-header h3 {
+    margin: 0 !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .table-card-header p {
+    margin: 4px 0 0 !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .table-actions {
+    align-items: center !important;
+    display: grid !important;
+    gap: 8px !important;
+    grid-template-columns: minmax(0, 1fr) 44px !important;
+    inline-size: 100% !important;
+    min-inline-size: 0 !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .admin-search {
+    align-items: center !important;
+    display: flex !important;
+    inline-size: 100% !important;
+    max-inline-size: none !important;
+    min-block-size: 44px !important;
+    min-inline-size: 0 !important;
+    padding: 0 10px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .admin-search input {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    inline-size: 100% !important;
+    min-block-size: 44px !important;
+    min-inline-size: 0 !important;
+    padding: 0 5px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .scoreboard-filter-button {
+    block-size: 44px !important;
+    inline-size: 44px !important;
+    margin: 0 !important;
+    min-block-size: 44px !important;
+    min-inline-size: 44px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .responsive-table {
+    margin: 0 !important;
+    padding: 0 12px 14px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) table[data-mobile-card-table="true"] tbody {
+    gap: 8px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    tbody
+    tr[data-mobile-card-row="true"] {
+    border-radius: 13px !important;
+    padding: 2px 11px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    tbody
+    tr[data-mobile-card-row="true"]
+    > td {
+    gap: 8px !important;
+    grid-template-columns: minmax(76px, 0.58fr) minmax(0, 1.42fr) !important;
+    line-height: 1.25 !important;
+    min-block-size: 0 !important;
+    padding: 5px 0 !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    tbody
+    tr[data-mobile-card-row="true"]
+    > td::before {
+    font-size: 0.61rem !important;
+    letter-spacing: 0.055em !important;
+    line-height: 1.15 !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    .participant-cell {
+    gap: 7px !important;
+    min-inline-size: 0 !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    .participant-cell
+    .avatar {
+    block-size: 38px !important;
+    flex: 0 0 38px !important;
+    font-size: 0.68rem !important;
+    inline-size: 38px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    .participant-cell
+    > :last-child {
+    min-inline-size: 0 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    tbody
+    tr[data-mobile-card-row="true"]
+    button,
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    tbody
+    tr[data-mobile-card-row="true"]
+    a,
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    tbody
+    tr[data-mobile-card-row="true"]
+    .icon-button {
+    min-block-size: 44px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .table-card:has(.scoreboard-filter-button) .table-card-header {
+    gap: 9px !important;
+    padding: 14px 14px 9px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button) .responsive-table {
+    padding: 0 10px 12px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    tbody
+    tr[data-mobile-card-row="true"] {
+    border-radius: 12px !important;
+    padding-inline: 9px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    tbody
+    tr[data-mobile-card-row="true"]
+    > td {
+    gap: 7px !important;
+    grid-template-columns: minmax(70px, 0.54fr) minmax(0, 1.46fr) !important;
+    padding-block: 4px !important;
+  }
+
+  .table-card:has(.scoreboard-filter-button)
+    table[data-mobile-card-table="true"]
+    .participant-cell
+    .avatar {
+    block-size: 36px !important;
+    flex-basis: 36px !important;
+    inline-size: 36px !important;
+  }
+}
